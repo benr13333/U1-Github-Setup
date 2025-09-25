@@ -1,9 +1,8 @@
 import java.util.Scanner;
-public class Main {
 
+public class Main {
     public static void main(String[] args)
     {
-
         //Color Codes
         String GREEN  = "\u001B[32m";
         String YELLOW = "\u001B[33m";
@@ -11,8 +10,8 @@ public class Main {
         String CYAN   = "\u001B[36m";
         String RESET  = "\u001B[0m";
 
-
-        Scanner scan = new Scanner(System.in);  // create a Scanner "object"
+        //Create a Scanner "object"
+        Scanner scan = new Scanner(System.in);
 
         //Top Header
         System.out.println(GREEN + "════════════════════════════════════════════════════════" );
@@ -53,15 +52,11 @@ public class Main {
             System.out.println(GREEN + "║══════════════════════════════════════════════════════" + RESET);
             System.out.println(GREEN + "║  " + BLUE + "Total bill per person: " + YELLOW + "$" + billPerPerson + RESET);
             System.out.println(GREEN + "╚══════════════════════════════════════════════════════╝" + RESET);
-
-
-
         }
         else //break
         {
-            System.out.println("Number is not a valid money format OR tip percent is over 100 OR there is less than one person");
+            System.out.println("Number is not a valid money format OR tip percent is over 100 OR there is less than one person.");
+            System.out.println("Please try again with valid arguments.");
         }
-
-
     }
 }
