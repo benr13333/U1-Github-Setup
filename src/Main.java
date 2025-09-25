@@ -14,10 +14,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         //Top Header
-        System.out.println(GREEN + "════════════════════════════════════════════════════════" );
+        System.out.println(GREEN + "╔══════════════════════════════════════════════════════╗" );
         System.out.println(GREEN + "║" + CYAN + "                   TIP CALCULATOR                     " + GREEN + "║");
         System.out.println(GREEN + "║" + CYAN + "!Important! | Do not use symbols when inputting data." + GREEN + " ║");
-        System.out.println("════════════════════════════════════════════════════════");
+        System.out.println("╚══════════════════════════════════════════════════════╝");
 
         //Inputs
         System.out.println("\n══════════════════════════════");
@@ -44,13 +44,13 @@ public class Main {
             double tipPerPerson = Math.round((tipAmount / numOfPeople) * 100.0) / 100.0;
             double billPerPerson = Math.round((billCost / numOfPeople) * 100.0) / 100.0;
             System.out.println("\n" + GREEN + "╔══════════════════════════════════════════════════════╗" + RESET);
-            System.out.println(GREEN + "║  " + BLUE + "Total tip amount: " + YELLOW + "$" + tipAmount + RESET);
+            System.out.println(GREEN + "║  " + BLUE + "Total tip amount: " + YELLOW + "$" + String.format("%.2f", tipAmount) + RESET);
             System.out.println(GREEN + "║══════════════════════════════════════════════════════" + RESET);
-            System.out.println(GREEN + "║  " + BLUE + "Total bill cost: " + YELLOW + "$" + billCost + RESET);
+            System.out.println(GREEN + "║  " + BLUE + "Total bill cost: " + YELLOW + "$" + String.format("%.2f", billCost) + RESET);
             System.out.println(GREEN + "║══════════════════════════════════════════════════════" + RESET);
-            System.out.println(GREEN + "║  " + BLUE + "Tip per person: " + YELLOW + "$" + tipPerPerson + RESET);
+            System.out.println(GREEN + "║  " + BLUE + "Tip per person: " + YELLOW + "$" + String.format("%.2f", tipPerPerson) + RESET);
             System.out.println(GREEN + "║══════════════════════════════════════════════════════" + RESET);
-            System.out.println(GREEN + "║  " + BLUE + "Total bill per person: " + YELLOW + "$" + billPerPerson + RESET);
+            System.out.println(GREEN + "║  " + BLUE + "Total bill per person: " + YELLOW + "$" + String.format("%.2f", billPerPerson) + RESET);
             System.out.println(GREEN + "╚══════════════════════════════════════════════════════╝" + RESET);
         }
         else //break
